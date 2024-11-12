@@ -5,6 +5,7 @@ Bu proje, mesleki eğitim yaptığım kurumda acil ihtiyaç duyulan kurum içi k
 2 iş günü içinde geliştirilmiştir. 
 
 Uygulama; anket oluşturma, verileri raporlaştırma ve yönetici kontrolü gibi özelliklere sahip bir web uygulamasıdır.
+
 ![Ekran görüntüsü 2024-11-12 105751](https://github.com/user-attachments/assets/14de8940-1909-4110-8488-b5a868682657)
 ![Ekran görüntüsü 2024-11-12 105714](https://github.com/user-attachments/assets/2619db91-20eb-4d04-8474-ac348792db58)
 ![Ekran görüntüsü 2024-11-12 105647](https://github.com/user-attachments/assets/3aac2a99-0551-4ffb-ba33-9b4a888daffd)
