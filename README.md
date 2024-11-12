@@ -4,7 +4,7 @@
 Bu proje, mesleki eğitim yaptığım kurumda acil ihtiyaç duyulan kurum içi kullanım amaçlı bir anket uygulaması olarak, MVC hakkında detaylı bilgiye sahip olunmadan, 
 2 iş günü içinde geliştirilmiştir. 
 
-Uygulama; anket oluşturma, verileri raporlaştırma ve yönetici kontrolü gibi özelliklere sahip bir web uygulamasıdır.
+Uygulama; anket oluşturma, verileri raporlaştırma ve admin kontrolü gibi özelliklere sahip bir web uygulamasıdır.
 
 ![Ekran görüntüsü 2024-11-12 105751](https://github.com/user-attachments/assets/14de8940-1909-4110-8488-b5a868682657)
 ![Ekran görüntüsü 2024-11-12 105714](https://github.com/user-attachments/assets/2619db91-20eb-4d04-8474-ac348792db58)
