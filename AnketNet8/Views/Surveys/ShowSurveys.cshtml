@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Survey>
+@{
+    ViewData["Title"] = "Anketler";
+}
+
+<h1>Anketler</h1>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-12 mb-3">
+                <div class="card rounded" style="background-color: #e1e8ed; border: none;">
+                    <div class="card-body d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                            <div class="badge bg-primary text-white me-3" style="font-size: 1.5rem; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                @item.Title.Substring(0, 2).ToUpper()
+                            </div>
+                            <div>
+                                <h5 class="card-title mb-1">@Html.DisplayFor(modelItem => item.Title)</h5>
+                                <p class="card-text mb-0">@Html.DisplayFor(modelItem => item.CreatedDate)</p>
+                            </div>
+                        </div>
+                        <div>
+                            <a asp-action="Solve" asp-route-id="@item.Id" class="btn btn-sm btn-outline-success" title="Çözüm">
+                                <strong>ANKETİ ÇÖZ</strong>
+                                <i class="fas fa-check"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

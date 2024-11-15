@@ -31,10 +31,48 @@ namespace AnketNet8.Controllers
 
         // GET: Surveys
         [AllowAnonymous]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string gender, string city)
         {
-            return View(await _context.Surveys.ToListAsync());
+            var surveys = _context.Surveys.AsQueryable();
+
+            // Filter based on gender if provided
+            if (!string.IsNullOrEmpty(gender))
+            {
+                surveys = surveys.Where(s => s.Gender == gender);
+            }
+
+            // Filter based on city if provided
+            if (!string.IsNullOrEmpty(city))
+            {
+                surveys = surveys.Where(s => s.City == city);
+            }
+
+            return View(await surveys.ToListAsync());
         }
+
+
+        // Display surveys based on filter
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> ShowSurveys(string gender, string city)
+        {
+            var surveys = _context.Surveys.AsQueryable();
+
+            // Filter by selected gender or include surveys marked as "All"
+            if (!string.IsNullOrEmpty(gender) && gender != "All")
+            {
+                surveys = surveys.Where(s => s.Gender == gender || s.Gender == "All");
+            }
+
+            // Filter by city if provided
+            if (!string.IsNullOrEmpty(city))
+            {
+                surveys = surveys.Where(s => s.City == city);
+            }
+
+            return View("ShowSurveys", await surveys.ToListAsync());
+        }
+
 
         [AllowAnonymous]
         public async Task<IActionResult> AdminLogin()
@@ -94,11 +132,9 @@ namespace AnketNet8.Controllers
         }
 
         // POST: Surveys/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,CreatedDate")] Survey survey)
+        public async Task<IActionResult> Create([Bind("Id,Title,CreatedDate,Gender,City")] Survey survey)
         {
             if (ModelState.IsValid)
             {
@@ -108,7 +144,6 @@ namespace AnketNet8.Controllers
             }
             return View(survey);
         }
-
         // GET: Surveys/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {

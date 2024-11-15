@@ -5,10 +5,8 @@ public class Survey
     public int Id { get; set; }
     public string Title { get; set; }
     public DateTime CreatedDate { get; set; }
-
-    // Anketin sorularý
+    public string Gender { get; set; } // "Male", "Female", or "Other"
+    public string City { get; set; }
     public ICollection<Question> Questions { get; set; } = new List<Question>();
-
-    // Katýlýmcý sayýsýný tutmak için ek alan
     public int ParticipantCount { get; set; }
 }

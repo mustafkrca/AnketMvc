@@ -1,38 +1,42 @@
-﻿@model IEnumerable<Survey>
-
-@{
-    ViewData["Title"] = "Index";
+﻿@{
+    ViewData["Title"] = "Anket Filtresi";
 }
 
-<h1>Anketler</h1>
-
+<h1 class=" mb-4" style="font-size: 2rem; font-weight: bold;">Anket Filtresi</h1>
 
 <div class="container">
-    <div class="row">
-        @foreach (var item in Model)
-        {
-            <div class="col-12 mb-3">
-                <div class="card rounded" style="background-color: #e1e8ed; border: none;">
-                    <div class="card-body d-flex justify-content-between align-items-center">
-                        <div class="d-flex align-items-center">
-                            <div class="badge bg-primary text-white me-3" style="font-size: 1.5rem; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
-                                @item.Title.Substring(0, 2).ToUpper() <!-- Display first two letters as in the design -->
-                            </div>
-                            <div>
-                                <h5 class="card-title mb-1">@Html.DisplayFor(modelItem => item.Title)</h5>
-                                <p class="card-text mb-0">@Html.DisplayFor(modelItem => item.CreatedDate)</p>
-                            </div>
-                        </div>
-                        <div>
-                            
-                            <a asp-action="Solve" asp-route-id="@item.Id" class="btn btn-sm btn-outline-success" title="Çözüm">
-                                <strong>ANKETİ ÇÖZ</strong>
-                                <i class="fas fa-check"></i> <!-- Solve Icon -->
-                            </a>
-                        </div>
-                    </div>
+    <form asp-action="ShowSurveys" method="post" class="p-4 rounded shadow-sm bg-light">
+        <div class="row mb-3">
+            <!-- Gender Radio Buttons -->
+            <div class="col-md-6">
+                <label class="form-label" style="font-size: 1.25rem; font-weight: bold;">Cinsiyet</label>
+                <div class="form-check mt-2">
+                    <input class="form-check-input" type="radio" name="gender" value="Male" id="genderMale">
+                    <label class="form-check-label" for="genderMale" style="font-size: 1rem;">Erkek</label>
+                </div>
+                <div class="form-check mt-2">
+                    <input class="form-check-input" type="radio" name="gender" value="Female" id="genderFemale">
+                    <label class="form-check-label" for="genderFemale" style="font-size: 1rem;">Kadın</label>
                 </div>
             </div>
-        }
-    </div>
+
+            <!-- City Radio Buttons -->
+            <div class="col-md-6">
+                <label class="form-label" style="font-size: 1.25rem; font-weight: bold;">Şehir</label>
+                <div class="form-check mt-2">
+                    <input class="form-check-input" type="radio" name="city" value="Istanbul" id="cityIstanbul">
+                    <label class="form-check-label" for="cityIstanbul" style="font-size: 1rem;">Istanbul</label>
+                </div>
+                <div class="form-check mt-2">
+                    <input class="form-check-input" type="radio" name="city" value="Ankara" id="cityAnkara">
+                    <label class="form-check-label" for="cityAnkara" style="font-size: 1rem;">Ankara</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg px-5 mt-3" style="font-size: 1.2rem; font-weight: bold;">Anketleri Getir</button>
+        </div>
+    </form>
 </div>

@@ -1,38 +1,78 @@
 ﻿@model Survey
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Oluştur";
 }
 
-<h1>Create</h1>
+<h1 class="mb-4" style="font-size: 2rem; font-weight: bold;">Anket Oluştur</h1>
 
-<h4>Survey</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreatedDate" class="control-label"></label>
-                <input asp-for="CreatedDate" class="form-control" />
-                <span asp-validation-for="CreatedDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form asp-action="Create" class="p-4 rounded shadow-sm bg-light">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <!-- Survey Title -->
+                <div class="form-group mb-3">
+                    <label asp-for="Title" class="form-label" style="font-weight: bold;">Anket Başlığı</label>
+                    <input asp-for="Title" class="form-control" placeholder="Anket Başlığı" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+                <!-- Created Date (Default to Today) -->
+                <div class="form-group mb-3">
+                    <label asp-for="CreatedDate" class="form-label" style="font-weight: bold;">Oluşturulma Tarihi</label>
+                    <input asp-for="CreatedDate" class="form-control" type="date" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                    <span asp-validation-for="CreatedDate" class="text-danger"></span>
+                </div>
+
+                <!-- Gender Radio Buttons -->
+                <div class="form-group mb-3">
+                    <label class="form-label" style="font-weight: bold;">Cinsiyet</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Gender" value="Male" id="genderMale">
+                        <label class="form-check-label" for="genderMale">Erkek</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Gender" value="Female" id="genderFemale">
+                        <label class="form-check-label" for="genderFemale">Kadın</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Gender" value="All" id="genderAll">
+                        <label class="form-check-label" for="genderAll">Tümü</label>
+                    </div>
+                    <span asp-validation-for="Gender" class="text-danger"></span>
+                </div>
+
+                <!-- City Radio Buttons -->
+                <div class="form-group mb-3">
+                    <label class="form-label" style="font-weight: bold;">Şehir</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="City" value="Istanbul" id="cityIstanbul">
+                        <label class="form-check-label" for="cityIstanbul">İstanbul</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="City" value="Ankara" id="cityAnkara">
+                        <label class="form-check-label" for="cityAnkara">Ankara</label>
+                    </div>
+                    <span asp-validation-for="City" class="text-danger"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <input type="submit" value="Oluştur" class="btn btn-primary btn-lg px-5 mt-3" />
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+<div class="text-center mt-4">
+    <a asp-action="Index" class="btn btn-outline-secondary">Listeye Dön</a>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
