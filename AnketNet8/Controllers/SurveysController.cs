@@ -182,20 +182,23 @@ namespace AnketNet8.Controllers
             {
                 try
                 {
-                    // Mevcut veritabanı kaydını alın ve sadece güncellenen alanları güncelleyin
-                    var existingSurvey = await _context.Surveys.AsNoTracking().FirstOrDefaultAsync(s => s.Id == id);
+                    // Fetch the existing survey along with its questions to update and display questions
+                    var existingSurvey = await _context.Surveys
+                        .Include(s => s.Questions) // Include related questions
+                        .FirstOrDefaultAsync(s => s.Id == id);
+
                     if (existingSurvey == null)
                     {
                         return NotFound();
                     }
 
-                    // Güncellenmiş alanları mevcut varlıkla birleştirin
+                    // Update survey fields
                     existingSurvey.Title = survey.Title;
                     existingSurvey.CreatedDate = survey.CreatedDate;
                     existingSurvey.Gender = survey.Gender;
                     existingSurvey.City = survey.City;
 
-                    // Güncelle ve kaydet
+                    // Save the changes
                     _context.Update(existingSurvey);
                     await _context.SaveChangesAsync();
                 }
@@ -210,10 +213,19 @@ namespace AnketNet8.Controllers
                         throw;
                     }
                 }
+
+                // Reload the survey with questions to display them after saving
                 return RedirectToAction("AdminDashboard");
             }
-            return View(survey);
+
+            // Reload the survey with questions if model state is invalid
+            var surveyWithQuestions = await _context.Surveys
+                .Include(s => s.Questions)
+                .FirstOrDefaultAsync(s => s.Id == id);
+
+            return View(surveyWithQuestions);
         }
+
 
 
         // GET: Surveys/Delete/5
