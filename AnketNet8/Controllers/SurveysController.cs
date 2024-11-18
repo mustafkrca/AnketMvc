@@ -171,7 +171,7 @@ namespace AnketNet8.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,CreatedDate")] Survey survey)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,CreatedDate,Gender,City")] Survey survey)
         {
             if (id != survey.Id)
             {
@@ -182,7 +182,21 @@ namespace AnketNet8.Controllers
             {
                 try
                 {
-                    _context.Update(survey);
+                    // Mevcut veritabanı kaydını alın ve sadece güncellenen alanları güncelleyin
+                    var existingSurvey = await _context.Surveys.AsNoTracking().FirstOrDefaultAsync(s => s.Id == id);
+                    if (existingSurvey == null)
+                    {
+                        return NotFound();
+                    }
+
+                    // Güncellenmiş alanları mevcut varlıkla birleştirin
+                    existingSurvey.Title = survey.Title;
+                    existingSurvey.CreatedDate = survey.CreatedDate;
+                    existingSurvey.Gender = survey.Gender;
+                    existingSurvey.City = survey.City;
+
+                    // Güncelle ve kaydet
+                    _context.Update(existingSurvey);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -200,6 +214,7 @@ namespace AnketNet8.Controllers
             }
             return View(survey);
         }
+
 
         // GET: Surveys/Delete/5
         public async Task<IActionResult> Delete(int? id)

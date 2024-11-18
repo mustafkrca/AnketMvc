@@ -1,7 +1,36 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\musta\\Documents\\GitHub\\AnketMvc\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1F91C92C-B364-4E96-85C2-F54E8AF4856E}|AnketNet8\\AnketNet8.csproj|c:\\users\\musta\\documents\\github\\anketmvc\\anketnet8\\views\\surveys\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F91C92C-B364-4E96-85C2-F54E8AF4856E}|AnketNet8\\AnketNet8.csproj|solutionrelative:anketnet8\\views\\surveys\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F91C92C-B364-4E96-85C2-F54E8AF4856E}|AnketNet8\\AnketNet8.csproj|c:\\users\\musta\\documents\\github\\anketmvc\\anketnet8\\views\\surveys\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F91C92C-B364-4E96-85C2-F54E8AF4856E}|AnketNet8\\AnketNet8.csproj|solutionrelative:anketnet8\\views\\surveys\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F91C92C-B364-4E96-85C2-F54E8AF4856E}|AnketNet8\\AnketNet8.csproj|c:\\users\\musta\\documents\\github\\anketmvc\\anketnet8\\controllers\\surveyscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F91C92C-B364-4E96-85C2-F54E8AF4856E}|AnketNet8\\AnketNet8.csproj|solutionrelative:anketnet8\\controllers\\surveyscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F91C92C-B364-4E96-85C2-F54E8AF4856E}|AnketNet8\\AnketNet8.csproj|c:\\users\\musta\\documents\\github\\anketmvc\\anketnet8\\data\\surveycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F91C92C-B364-4E96-85C2-F54E8AF4856E}|AnketNet8\\AnketNet8.csproj|solutionrelative:anketnet8\\data\\surveycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F91C92C-B364-4E96-85C2-F54E8AF4856E}|AnketNet8\\AnketNet8.csproj|c:\\users\\musta\\documents\\github\\anketmvc\\anketnet8\\views\\surveys\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F91C92C-B364-4E96-85C2-F54E8AF4856E}|AnketNet8\\AnketNet8.csproj|solutionrelative:anketnet8\\views\\surveys\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F91C92C-B364-4E96-85C2-F54E8AF4856E}|AnketNet8\\AnketNet8.csproj|c:\\users\\musta\\documents\\github\\anketmvc\\anketnet8\\models\\survey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F91C92C-B364-4E96-85C2-F54E8AF4856E}|AnketNet8\\AnketNet8.csproj|solutionrelative:anketnet8\\models\\survey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F91C92C-B364-4E96-85C2-F54E8AF4856E}|AnketNet8\\AnketNet8.csproj|c:\\users\\musta\\documents\\github\\anketmvc\\anketnet8\\views\\surveys\\adminlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F91C92C-B364-4E96-85C2-F54E8AF4856E}|AnketNet8\\AnketNet8.csproj|solutionrelative:anketnet8\\views\\surveys\\adminlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +51,94 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SurveyContext.cs",
+              "DocumentMoniker": "C:\\Users\\musta\\Documents\\GitHub\\AnketMvc\\AnketNet8\\Data\\SurveyContext.cs",
+              "RelativeDocumentMoniker": "AnketNet8\\Data\\SurveyContext.cs",
+              "ToolTip": "C:\\Users\\musta\\Documents\\GitHub\\AnketMvc\\AnketNet8\\Data\\SurveyContext.cs",
+              "RelativeToolTip": "AnketNet8\\Data\\SurveyContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T06:28:53.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\musta\\Documents\\GitHub\\AnketMvc\\AnketNet8\\Views\\Surveys\\Create.cshtml",
+              "RelativeDocumentMoniker": "AnketNet8\\Views\\Surveys\\Create.cshtml",
+              "ToolTip": "C:\\Users\\musta\\Documents\\GitHub\\AnketMvc\\AnketNet8\\Views\\Surveys\\Create.cshtml",
+              "RelativeToolTip": "AnketNet8\\Views\\Surveys\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-15T12:34:56.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\musta\\Documents\\GitHub\\AnketMvc\\AnketNet8\\Views\\Surveys\\Edit.cshtml",
+              "RelativeDocumentMoniker": "AnketNet8\\Views\\Surveys\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\musta\\Documents\\GitHub\\AnketMvc\\AnketNet8\\Views\\Surveys\\Edit.cshtml",
+              "RelativeToolTip": "AnketNet8\\Views\\Surveys\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-15T12:28:48.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SurveysController.cs",
+              "DocumentMoniker": "C:\\Users\\musta\\Documents\\GitHub\\AnketMvc\\AnketNet8\\Controllers\\SurveysController.cs",
+              "RelativeDocumentMoniker": "AnketNet8\\Controllers\\SurveysController.cs",
+              "ToolTip": "C:\\Users\\musta\\Documents\\GitHub\\AnketMvc\\AnketNet8\\Controllers\\SurveysController.cs",
+              "RelativeToolTip": "AnketNet8\\Controllers\\SurveysController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T12:29:10.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminDashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\musta\\Documents\\GitHub\\AnketMvc\\AnketNet8\\Views\\Surveys\\AdminDashboard.cshtml",
+              "RelativeDocumentMoniker": "AnketNet8\\Views\\Surveys\\AdminDashboard.cshtml",
+              "ToolTip": "C:\\Users\\musta\\Documents\\GitHub\\AnketMvc\\AnketNet8\\Views\\Surveys\\AdminDashboard.cshtml",
+              "RelativeToolTip": "AnketNet8\\Views\\Surveys\\AdminDashboard.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAqwBYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-15T11:25:49.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AdminLogin.cshtml",
+              "DocumentMoniker": "C:\\Users\\musta\\Documents\\GitHub\\AnketMvc\\AnketNet8\\Views\\Surveys\\AdminLogin.cshtml",
+              "RelativeDocumentMoniker": "AnketNet8\\Views\\Surveys\\AdminLogin.cshtml",
+              "ToolTip": "C:\\Users\\musta\\Documents\\GitHub\\AnketMvc\\AnketNet8\\Views\\Surveys\\AdminLogin.cshtml",
+              "RelativeToolTip": "AnketNet8\\Views\\Surveys\\AdminLogin.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-15T11:28:00.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Survey.cs",
+              "DocumentMoniker": "C:\\Users\\musta\\Documents\\GitHub\\AnketMvc\\AnketNet8\\Models\\Survey.cs",
+              "RelativeDocumentMoniker": "AnketNet8\\Models\\Survey.cs",
+              "ToolTip": "C:\\Users\\musta\\Documents\\GitHub\\AnketMvc\\AnketNet8\\Models\\Survey.cs",
+              "RelativeToolTip": "AnketNet8\\Models\\Survey.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T11:25:59.716Z"
             }
           ]
         },
