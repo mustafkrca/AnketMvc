@@ -1,6 +1,7 @@
 # ASP.NET MVC Anket Uygulaması
 
 Uygulama; anket oluşturma, verileri raporlaştırma ve admin kontrolü gibi özelliklere sahip bir web uygulamasıdır.
+- staj yaptığım kurumun ihtiyacı olması sebebiyle yapay zeka ile 1 günde yapıldı.
 
 ![Ekran görüntüsü 2024-11-12 105751](https://github.com/user-attachments/assets/14de8940-1909-4110-8488-b5a868682657)
 ![Ekran görüntüsü 2024-11-12 105714](https://github.com/user-attachments/assets/2619db91-20eb-4d04-8474-ac348792db58)
